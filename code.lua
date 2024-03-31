@@ -153,10 +153,10 @@ local function HLHRG_fake_script() -- MCSO.Handler
 	
 	local function Rainbowify(Object, Property)
 		local Rainbow = coroutine.create(function()
-			while task.wait(0) do
+			while wait() do
 				for i = 1,255 do
 					Object[Property] = Color3.fromHSV(i/255, 1, 1)
-					task.wait(0)
+					wait()
 				end
 			end
 		end)
